@@ -11,7 +11,7 @@ interface DraggableCard {
 
 const CARDS: DraggableCard[] = [
   { id: 'card-1', label: '🎨 Design', color: '#e74c8b' },
-  { id: 'card-2', label: '💻 Develop', color: '#6c5ce7' },
+  { id: 'card-2', label: '💻 Develop', color: 'var(--accent)' },
   { id: 'card-3', label: '🧪 Test', color: '#00b894' },
   { id: 'card-4', label: '🚀 Deploy', color: '#fdcb6e' },
 ];
@@ -96,14 +96,14 @@ export default function DragAndDrop() {
 
       <DragDropProvider
         onDragOver={(event) => {
-          const target = event.operation.target;
+          const target = event.operation?.target;
           setActiveTargetId(target?.id?.toString() ?? null);
         }}
         onDragEnd={(event) => {
           setActiveTargetId(null);
           if (event.canceled) return;
 
-          const { source, target } = event.operation;
+          const { source, target } = event.operation ?? {};
           if (source && target) {
             const targetId = target.id.toString();
             const isDropZone = DROP_ZONES.some((z) => z.id === targetId);

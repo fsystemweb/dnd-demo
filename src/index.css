@@ -9,9 +9,9 @@
   --text-primary: #e8e8f0;
   --text-secondary: #8888aa;
   --text-muted: #5a5a7a;
-  --accent: #6c5ce7;
-  --accent-light: #a29bfe;
-  --accent-glow: rgba(108, 92, 231, 0.3);
+  --accent: #6c6c6c; /* neutral gray */
+  --accent-light: #b0b0b0; /* lighter gray */
+  --accent-glow: rgba(108, 108, 108, 0.3);
   --success: #00b894;
   --warning: #fdcb6e;
   --danger: #e74c8b;

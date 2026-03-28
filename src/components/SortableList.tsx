@@ -51,10 +51,10 @@ export default function SortableList() {
         <DragDropProvider
           onDragEnd={(event) => {
             const { operation } = event;
-            if (event.canceled) return;
+            if (event.canceled || !operation) return;
 
             setItems((currentItems) =>
-              move(currentItems, operation.source!, operation.target!)
+              move(currentItems, event)
             );
           }}
         >

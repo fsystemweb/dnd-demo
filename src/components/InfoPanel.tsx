@@ -42,8 +42,8 @@ function App() {
   return (
     <DragDropProvider
       onDragEnd={(event) => {
-        const { source, target } = event.operation;
-        if (target) {
+        const { source, target } = event.operation ?? {};
+        if (source && target) {
           console.log(\`Dropped \${source.id} on \${target.id}\`);
         }
       }}
@@ -130,7 +130,7 @@ function SortableItem({ id, index }) {
 }
 
 // In parent: use move() in onDragEnd
-// setItems(items => move(items, source, target));`}</code>
+  // setItems(items => move(items, event));`}</code>
           </pre>
           <p className="info-desc">
             Combines draggable + droppable for sortable lists. Requires both <code>id</code> and{' '}
