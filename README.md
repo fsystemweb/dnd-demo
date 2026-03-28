@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 🎨 dnd-kit Demo Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive laboratory for exploring **dnd-kit**, the modular and lightweight drag-and-drop toolkit for React. This demo serves as both a functional playground and an educational resource for mastering complex drag-and-drop interactions.
 
-Currently, two official plugins are available:
+![dnd-kit Demo Screenshot](src/assets/hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Overview
 
-## React Compiler
+This application showcases the power and flexibility of `@dnd-kit`. It's designed to help developers understand how to implement professional-grade drag-and-drop experiences with minimal effort and maximum accessibility.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Key Features
+- **🔄 Sortable Lists**: Implementation of vertically sortable items using `@dnd-kit/sortable`.
+- **🎯 Drag-to-Drop Zones**: Advanced drop zone logic using `useDraggable` and `useDroppable`.
+- **📖 Integrated Doc Panel**: Real-time documentation and code snippets explaining the hooks used in each interaction.
+- **♿ Accessibility**: Built-in support for keyboard navigation and screen readers, leveraging dnd-kit's core strengths.
+- **✨ Premium UI**: A polished, responsive interface built with modern CSS and fluid animations.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **React 19** - For the UI foundation.
+- **TypeScript** - For type safety and better developer experience.
+- **Vite** - For lightning-fast development and bundling.
+- **dnd-kit** - The star of the show (`core`, `sortable`, `modifiers`, `utilities`).
+- **Vanilla CSS** - Custom styles for a unique and performant Look & Feel.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎓 Learning Objectives
+Explore the following hooks and concepts within the codebase:
+- `useDraggable`: Making any component draggable.
+- `useDroppable`: Creating target zones for draggable items.
+- `useSortable`: Handling list reordering with ease.
+- `DndContext`: Managing the global state of drag interactions.
+- `DragOverlay`: Providing smooth, phantom-like previews during dragging.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🏃 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone & Install
+```bash
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Run Locally
+```bash
+# Start the development server
+npm run dev
 ```
+
+### 3. Build for Production
+```bash
+# Create a production-ready bundle
+npm run build
+```
+
+## 📜 License
+MIT
